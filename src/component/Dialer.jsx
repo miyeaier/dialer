@@ -40,7 +40,7 @@ const Dialer = () => {
           <button onClick={() => handleClick("#")}>#</button>
         </section>
         <section className="operators">
-          <button onClick={() => handleResult()}>log out</button>
+          <button onClick={() => handleResult()}>Sum</button>
         </section>
       </section>
     </div>
