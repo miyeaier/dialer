@@ -1,8 +1,9 @@
-import './App.css';
+import Dialer from "./components/Dialer"
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
+      <Dialer />
     </div>
   );
 }

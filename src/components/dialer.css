@@ -1,0 +1,46 @@
+.dialer {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #001e28;
+}
+
+.display {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #001e28;
+  padding: 30px 10px;
+  font-size: 25px;
+  color: lightcoral
+}
+
+button {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  background-color: #001e28;
+  color: lightcoral;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 20.2px;
+  border-radius: 5px;
+  height: 60px;
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #001e28;
+}
+
+.expression {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  color: lightcoral
+}
