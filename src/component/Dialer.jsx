@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import "./dialer.css";
 const Dialer = () => {
+  const [display, setDisplay] = useState("");
   const [expression, setExpression] = useState([]);
   const handleClick = (value) => {
+    setDisplay(value);
     setExpression([...expression, value]);
   };
+  const handleResult = () => {
+    const result = expression
+      .filter(Number)
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+    setDisplay(result);
+    setExpression("");
+  };
+
   return (
     <div className="dialer">
-      <h3 type="number" className="display"></h3>
+      <h3 type="number" className="display">
+        {display}
+      </h3>
       <span className="expression">{expression}</span>
 
       <section className="panel">
@@ -26,6 +38,9 @@ const Dialer = () => {
           <button onClick={() => handleClick("*")}>*</button>
           <button onClick={() => handleClick(0)}>0</button>
           <button onClick={() => handleClick("#")}>#</button>
+        </section>
+        <section className="operators">
+          <button onClick={() => handleResult()}>log out</button>
         </section>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import Dialer from "./components/Dialer"
+import Dialer from "./component/Dialer"
 
 function App() {
   return (
@@ -7,5 +7,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
