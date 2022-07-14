@@ -1,29 +1,33 @@
+import React, { useState } from "react";
 import "./dialer.css";
 const Dialer = () => {
+  const [expression, setExpression] = useState([]);
+  const handleClick = (value) => {
+    setExpression([...expression, value]);
+  };
   return (
     <div className="dialer">
-      <h3 type="number" className="display">
-      </h3>
-      <span className="expression"></span>
+      <h3 type="number" className="display"></h3>
+      <span className="expression">{expression}</span>
 
       <section className="panel">
         <section className="numbers">
-          <button onClick={() =>(1)}>1</button>
-          <button onClick={() => (2)}>2</button>
-          <button onClick={() => (3)}>3</button>
+          <button onClick={() => handleClick(1)}>1</button>
+          <button onClick={() => handleClick(2)}>2</button>
+          <button onClick={() => handleClick(3)}>3</button>
 
-          <button onClick={() => (4)}>4</button>
-          <button onClick={() => (5)}>5</button>
-          <button onClick={() => (6)}>6</button>
+          <button onClick={() => handleClick(4)}>4</button>
+          <button onClick={() => handleClick(5)}>5</button>
+          <button onClick={() => handleClick(6)}>6</button>
 
-          <button onClick={() => (7)}>7</button>
-          <button onClick={() => (8)}>8</button>
-          <button onClick={() => (9)}>9</button>
-          <button onClick={() => ("*")}>*</button>
-          <button onClick={() => (0)}>0</button>
-          <button onClick={() => ("#")}>#</button>
+          <button onClick={() => handleClick(7)}>7</button>
+          <button onClick={() => handleClick(8)}>8</button>
+          <button onClick={() => handleClick(9)}>9</button>
+          <button onClick={() => handleClick("*")}>*</button>
+          <button onClick={() => handleClick(0)}>0</button>
+          <button onClick={() => handleClick("#")}>#</button>
         </section>
-        </section>
+      </section>
     </div>
   );
 };
